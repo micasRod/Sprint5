@@ -15,3 +15,13 @@ for cliente in misClientes:
     else:
         print("El cliente {} no puede tener chequera".format(cliente.get_nombre())) 
 
+class LeerJson:
+    archivoJson= input("Ingrese el nombre del archivo json")
+
+    def init(self) -> None:
+        pass
+
+    def abrirArchivo(archivoJson):
+        with open(archivoJson) as file:
+            datos=json.loads(file.read())
+        return datos
