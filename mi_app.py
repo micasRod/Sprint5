@@ -1,5 +1,8 @@
+
 import json
+from typing_extensions import Self
 from clases import *
+import codecs
 
 
 # cliente = ClienteBlack()
@@ -26,3 +29,33 @@ class LeerJson:
         with open(archivoJson) as file:
             datos=json.loads(file.read())
         return datos
+
+class Crear_HTML:
+    import codecs
+
+archivoHTML= input("ingrese nombre del archivo que desea crear")
+
+archivoHTML=archivoHTML+".html"
+f=open(archivoHTML,'w')
+
+html_template="""
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Hola</p>
+</body>
+</html>
+"""
+f.write(html_template)
+
+f.close()
+
+file = codecs.open(archivoHTML, 'r', "utf-8")
+
+print(file.read())
