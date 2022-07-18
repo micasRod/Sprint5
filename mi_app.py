@@ -33,7 +33,7 @@ class LeerJson:
 class Crear_HTML:
     import codecs
 
-archivoHTML= input("ingrese nombre del archivo que desea crear")
+archivoHTML= input("ingrese nombre del archivo que desea a crear")
 
 archivoHTML=archivoHTML+".html"
 f=open(archivoHTML,'w')
